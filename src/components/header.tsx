@@ -7,7 +7,7 @@ const HeaderComponent = () => {
   return (
     <>
       <section className="header" id="header">
-        <img src={logo} alt="" />
+        <img src={logo} alt="Amazon-Logo" />
 
         <div className="searchbar">
           <input type="text" />

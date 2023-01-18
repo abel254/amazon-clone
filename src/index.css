@@ -18,10 +18,8 @@
  .header img{
   width: 6.8em;
  }
- .header .searchbar{
-  width: 46em;
- }
  .searchbar{
+  width: 46em;
   display: flex;
   align-items: center;
   height: 2.3em; 
