@@ -1,4 +1,5 @@
 import { FiMenu } from "react-icons/fi";
+import "./navbar.css";
 
 const NavbarComponent = () => {
   return (

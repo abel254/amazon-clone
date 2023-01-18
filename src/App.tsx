@@ -1,6 +1,6 @@
 import React from "react";
 import HeaderComponent from "./components/header";
-import NavbarComponent from "./components/navbar";
+import NavbarComponent from "./components/navbar/navbar";
 
 function App() {
   return (
