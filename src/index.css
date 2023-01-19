@@ -40,7 +40,7 @@
   border-radius: 0 5px 5px 0;
   position: absolute;
   right: 0;
-
+  cursor: pointer;
  }
  .searchbar .search-icon svg{
   font-size: 1.7em;
@@ -84,3 +84,6 @@
   margin-top: -1em;
   color: black;
  }
+
+ /*Navbar*/
+ 
