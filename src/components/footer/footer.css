@@ -1,0 +1,32 @@
+.footer button{
+    width: 100%;
+    padding: .6em 0;
+    background-color: #232f3e;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 600;
+}
+.footer-info{
+    display: flex;
+    justify-content: space-between;
+    background-color: #131921;
+    color: #fff;
+    padding: .8em 6em;
+}.footer-info div{
+    display: flex;
+    flex-direction: column;
+    width: 15em;
+}
+.footer-info h5{
+    font-size: .79rem;
+    margin-bottom: .5em;
+}
+.footer-info a{
+    text-decoration: none;
+    color: #fff;
+    font-size: .8rem;
+    margin-bottom: .5em;
+    letter-spacing: .03rem;
+}
