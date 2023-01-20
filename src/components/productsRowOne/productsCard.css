@@ -61,4 +61,5 @@
      padding: .4em;
      border-radius: 3px;
     transition: all .2s ease-in-out;
+    cursor: pointer;
 }
