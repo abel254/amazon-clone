@@ -4,6 +4,7 @@ import { CentralBannerComponent } from "./components/centralBanner/centralBanner
 import HeaderComponent from "./components/header";
 import NavbarComponent from "./components/navbar/navbar";
 import { ProductsComponent } from "./components/productsRowOne/products";
+import { ProductsTwoComponent } from "./components/productsRowTwo/productsTwo";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <BannerComponent />
       <ProductsComponent />
       <CentralBannerComponent />
+      <ProductsTwoComponent />
     </div>
   );
 }
