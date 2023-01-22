@@ -4,7 +4,6 @@ import { GrStar } from "react-icons/gr";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const image1 = require("./men-clothing.jpeg");
 
 export const ProductsComponent = () => {
   const [apiProducts, setApiProducts] = useState<any[]>([]);

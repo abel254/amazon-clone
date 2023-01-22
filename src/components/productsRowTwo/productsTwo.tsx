@@ -4,11 +4,6 @@ import { ProductsCard } from "../productsRowOne/productsCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const image1 = require("./jewellery.jpeg");
-const image2 = require("./electronics.jpg");
-const image3 = require("./women.jpg");
-const image4 = require("./computing.png");
-
 export const ProductsTwoComponent = () => {
   const [apiProducts, setApiProducts] = useState<any[]>([]);
 
@@ -27,11 +22,6 @@ export const ProductsTwoComponent = () => {
           return <ProductsCard key={product.id} {...product} />;
         })}
       </section>
-      {/* <section className="products-two">
-        {products.map((product, index) => {
-          return <ProductsCard key={index} {...product} />;
-        })}
-      </section> */}
     </>
   );
 };
