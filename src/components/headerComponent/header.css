@@ -1,0 +1,92 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #131921;
+    padding: .32em .8em;
+    color: #fff;
+}
+
+.header img {
+    width: 6.8em;
+}
+
+.searchbar {
+    width: 46em;
+    display: flex;
+    align-items: center;
+    height: 2.3em;
+    position: relative;
+}
+
+.searchbar input {
+    width: 100%;
+    height: 100%;
+    padding: .5em .5em;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.searchbar .search-icon {
+    height: 100%;
+    padding: 0 .6em;
+    background-color: #febd69;
+    border-radius: 0 5px 5px 0;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+.searchbar .search-icon svg {
+    font-size: 1.7em;
+    color: black;
+    margin-top: .2em;
+}
+
+.signin {
+    cursor: pointer;
+}
+
+.signin p,
+.return-orders p {
+    font-size: .71rem;
+}
+
+.signin span,
+.return-orders span,
+.basket p {
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.return-orders {
+    cursor: pointer;
+}
+
+.basket-link {
+    display: flex;
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+}
+
+.basket svg {
+    font-size: 1.4em;
+    margin-right: .3em;
+}
+
+.basket span {
+    background-color: #d8a122;
+    width: 1.5em;
+    height: 1.5em;
+    font-size: .7rem;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-left: 1.2em;
+    margin-top: -1em;
+    color: black;
+}

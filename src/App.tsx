@@ -1,21 +1,21 @@
 import React from "react";
-import { BannerComponent } from "./components/carouselBanner/banner";
-import { CentralBannerComponent } from "./components/centralBanner/centralBanner";
-import HeaderComponent from "./components/header";
+
+import HeaderComponent from "./components/headerComponent/header";
 import NavbarComponent from "./components/navbar/navbar";
 import { FooterComponent } from "./components/footer/footer";
-import { ProductsComponent } from "./components/productsRowOne/products";
-import { ProductsTwoComponent } from "./components/productsRowTwo/productsTwo";
+import { Route, Routes } from "react-router-dom";
+import { Home } from "./pages/Home";
+import { Cart } from "./pages/Cart";
 
 function App() {
   return (
     <div className="App">
       <HeaderComponent />
       <NavbarComponent />
-      <BannerComponent />
-      <ProductsComponent />
-      <CentralBannerComponent />
-      <ProductsTwoComponent />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
       <FooterComponent />
     </div>
   );
