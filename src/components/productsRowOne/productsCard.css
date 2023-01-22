@@ -18,20 +18,22 @@
     font-style: italic;
     text-align: end;
 }
-.info{
+ .info{
     display: flex;
     flex-direction: column;
     padding: .8em;
-}
+} 
 .info .image{
-    height: 35%;
-    width: 50%;
+    height: 9.6em;
+    width: 100%;
     text-align: center;
     align-self: center;
+    margin-bottom: 1em;
 }
 .info .image img{
-    width: 100%;
+    width: 50%;
     height: 100%;
+    
 }
 .info h5{
     font-size: .8rem;
@@ -47,6 +49,7 @@
 .info p{
     font-size: .79rem;
     margin-bottom: .62em;
+    /* height: 4em; */
 }
 .info h4{
     font-weight: 500;
@@ -62,4 +65,5 @@
      border-radius: 3px;
     transition: all .2s ease-in-out;
     cursor: pointer;
+   
 }
