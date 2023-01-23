@@ -1,7 +1,9 @@
-// import logo from "../assets/amazon-logo.png";
+import "./header.css";
 import { AiOutlineSearch, AiOutlineShoppingCart } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
-const logo = require("../assets/amazon-logo2.png");
+// const logo = require("../assets/amazon-logo2.png");
+const logo = require("../../assets/amazon-logo2.png");
 
 const HeaderComponent = () => {
   return (
@@ -29,9 +31,11 @@ const HeaderComponent = () => {
           </p>
         </div>
         <div className="basket">
-          <AiOutlineShoppingCart />
-          <span>0</span>
-          <p>Basket</p>
+          <Link to="/cart" className="basket-link">
+            <AiOutlineShoppingCart />
+            <span>0</span>
+            <p>Basket</p>
+          </Link>
         </div>
       </section>
     </>

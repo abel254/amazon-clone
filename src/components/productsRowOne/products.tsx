@@ -24,16 +24,7 @@ export const ProductsComponent = () => {
           return <ProductsCard key={product.id} {...product} />;
         })}
       </section>
-      {/* <section className="products">
-        {apiProducts.map((product) => {
-          return <ProductsCard key={product.id} {...product} />;
-        })}
-      </section> */}
-      {/* <section className="products">
-        {products.map((product, index) => {
-          return <ProductsCard key={index} {...product} />;
-        })}
-      </section> */}
+     
     </>
   );
 };

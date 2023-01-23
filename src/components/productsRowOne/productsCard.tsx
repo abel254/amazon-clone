@@ -3,14 +3,9 @@ import "./productsCard.css";
 import { ReactNode } from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { ProductsCardProps } from "../props/Product.type";
 
-type ProductsCardProps = {
-  title: string;
-  price: string;
-  description: string;
-  category: string;
-  image: string;
-};
+
 export const ProductsCard = ({
   title,
   price,
