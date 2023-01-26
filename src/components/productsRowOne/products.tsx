@@ -1,19 +1,18 @@
 import "./products.css";
 import { ProductsCard } from "./productsCard";
 import { GrStar } from "react-icons/gr";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import axios from "axios";
 
-
 export const ProductsComponent = () => {
-  const [apiProducts, setApiProducts] = useState<any[]>([]);
+    const [apiProducts, setApiProducts] = useState<any[]>([]);
 
-  useEffect(() => {
-    axios.get("https://fakestoreapi.com/products").then((res) => {
-      console.log(res.data);
-      setApiProducts(res.data);
-    });
-  }, []);
+    useEffect(() => {
+      axios.get("https://fakestoreapi.com/products").then((res) => {
+        console.log(res.data);
+        setApiProducts(res.data);
+      });
+    }, []);
 
   let slicedApiProducts = apiProducts.slice(0, 4);
 
@@ -24,7 +23,6 @@ export const ProductsComponent = () => {
           return <ProductsCard key={product.id} {...product} />;
         })}
       </section>
-     
     </>
   );
 };

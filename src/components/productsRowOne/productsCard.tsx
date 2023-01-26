@@ -4,9 +4,11 @@ import { ReactNode } from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { ProductsCardProps } from "../props/Product.type";
-
+import { formatCurrency } from "../../utilities/formCurrency";
+import { useShoppingCart } from "../../context/ShoppingCartContext";
 
 export const ProductsCard = ({
+  id,
   title,
   price,
   description,
@@ -15,6 +17,10 @@ export const ProductsCard = ({
 }: ProductsCardProps) => {
   const newDescription = description.slice(0, 52);
   const newTitle = title.slice(0, 18);
+
+  const { increaseCartQuantity, getItemQuantity } = useShoppingCart();
+
+  let quantity = getItemQuantity(Number(id));
 
   return (
     <>
@@ -27,8 +33,10 @@ export const ProductsCard = ({
           <h5>{newTitle}</h5>
           <div className="rating-icons">{}</div>
           <p>{newDescription}...</p>
-          <h4>${price}</h4>
-          <button>Add to Basket</button>
+          <h4>{formatCurrency(Number(price))}</h4>
+          <button onClick={() => increaseCartQuantity(Number(id))}>
+            Add to Basket
+          </button>
         </div>
       </section>
     </>
