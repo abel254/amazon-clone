@@ -1,4 +1,4 @@
-.cart {
+/* .cart {
   padding: 1em;
 }
 .image {
@@ -40,4 +40,37 @@
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   gap: 2;
+} */
+
+.image{
+  height: 9.6em;
+  /* width: 8em; */
+}
+.image img {
+  width: 50%;
+  height: 100%;
+}
+.buttons button{
+  background: linear-gradient(180deg, #fde7ae, #f3c451);
+  border: 1px solid #b79033;
+  font-weight: 500;
+  font-size: 0.8rem;
+  padding: 0.4em;
+  border-radius: 3px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.info span:nth-child(1) {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.62em;
+}
+.info span:nth-child(2) {
+   font-size: 0.79rem;
+  margin-bottom: 0.62em;
+}
+.info span:nth-child(3) {
+  font-weight: 500;
+  margin-bottom: 0.62em;
+  font-size: 0.92rem;
 }

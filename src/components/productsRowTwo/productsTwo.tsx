@@ -1,8 +1,9 @@
-import "./productsTwo.css";
+
 import { GrStar } from "react-icons/gr";
 import { ProductsCard } from "../productsRowOne/productsCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Col, Container, Row } from "react-bootstrap";
 
 export const ProductsTwoComponent = () => {
   const [apiProducts, setApiProducts] = useState<any[]>([]);
@@ -17,11 +18,15 @@ export const ProductsTwoComponent = () => {
   let slicedApiProducts = apiProducts.slice(4, 20);
   return (
     <>
-      <section className="products-two">
-        {slicedApiProducts.map((product) => {
-          return <ProductsCard key={product.id} {...product} />;
-        })}
-      </section>
+      <Container>
+        <Row xs={2} md={3} lg={4} className="g-3 mb-4">
+          {slicedApiProducts.map((product) => (
+            <Col key={product.id}>
+              <ProductsCard {...product} />
+            </Col>
+          ))}
+        </Row>
+      </Container>
     </>
   );
 };

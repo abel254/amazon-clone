@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Col, Row, Stack } from "react-bootstrap";
 import { useShoppingCart } from "../../context/ShoppingCartContext";
 import { formatCurrency } from "../../utilities/formCurrency";
 import "./cart.css";
@@ -8,8 +9,7 @@ import { CartCard } from "./cartCard";
 const cartImage = require("../../assets/cart-image.png");
 
 export const CartComponent = () => {
-  const { cartItems } = useShoppingCart();
-
+  const { cartItems, cartQuantity } = useShoppingCart();
   const [apiProducts, setApiProducts] = useState<any[]>([]);
 
   useEffect(() => {
@@ -19,29 +19,42 @@ export const CartComponent = () => {
     });
   }, []);
 
+  let quantity = cartQuantity;
 
   return (
     <>
-      <section className="cart">
-        <div className="cart-info">
-          <h3 className="cart-status">Your Amazon Shopping Basket is Empty</h3>
-          <div className="cart-products">
-            {cartItems.map((product) => {
-              return <CartCard key={product.id} {...product} />;
-            })}
-          </div>
+      
+
+      <section className="cart d-flex justify-content-between">
+        <div className="cart-info col-sm-12 col-md-8">
+          <div className="cart-banner col-sm-12"></div>
+          {cartQuantity === 0 ? (
+            <h4>Your Shopping Basket is Empty</h4>
+          ) : (
+            <h4>Your Shopping Basket List</h4>
+          )}
+          <div className="cart-products"></div>
+          <Row>
+            <Stack gap={2} className="mt-3 mb-3">
+              {cartItems.map((product) => (
+                <Col>
+                  <CartCard key={product.id} {...product} />
+                </Col>
+              ))}
+            </Stack>
+          </Row>
         </div>
-        <div className="cart-total">
-          <h3 className="subtotal">
-            Total{" "}
+
+        <div className="cart-total bg-white m-3 p-2">
+          <h4 className="subtotal fs-5 fw-bold">
+            Subtotal{" "}
             {formatCurrency(
               cartItems.reduce((total, cartItem) => {
                 const item = apiProducts.find((i) => i.id === cartItem.id);
                 return total + (item?.price || 0) * cartItem.quantity;
               }, 0)
             )}
-          </h3>
-          <button>Sing in to Checkout</button>
+          </h4>
         </div>
       </section>
     </>

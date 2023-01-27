@@ -1,8 +1,0 @@
-
-.products-two{
-    margin: 0 6em 1.1em 6em;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    grid-row-gap: 1.1em;
-    justify-items: center;
-}

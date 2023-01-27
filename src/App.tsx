@@ -8,6 +8,7 @@ import { Home } from "./pages/Home";
 import { Cart } from "./pages/Cart";
 import axios from "axios";
 import { ShoppingCartProvider } from "./context/ShoppingCartContext";
+import { Container } from "react-bootstrap";
 
 export const apiProductsOneContext = React.createContext<any[]>([]);
 export const apiProductsTwoContext = React.createContext<any[]>([]);
@@ -17,10 +18,12 @@ function App() {
     <ShoppingCartProvider>
       <HeaderComponent />
       <NavbarComponent />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
+
       <FooterComponent />
     </ShoppingCartProvider>
   );

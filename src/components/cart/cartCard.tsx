@@ -33,22 +33,52 @@ export const CartCard = ({ id, quantity }: cartCardProps) => {
   const newTitle = item.title.slice(0, 18);
 
   return (
-    <div className="cart d-flex align-items-center justify-content-between">
-      <div className="image">
-        <img src={item.image} alt="Image" />
-      </div>
-      <div className="info">
-        <span>{newTitle}</span>
-        <span>{newDescription}</span>
-        <span>{formatCurrency(Number(item.price))}</span>
+    // <div className="cart d-flex align-items-center justify-content-between">
+    //   <div className="image">
+    //     <img src={item.image} alt="Image" />
+    //   </div>
+    //   <div className="info">
+    //     <span>{newTitle}</span>
+    //     <span>{newDescription}</span>
+    //     <span>{formatCurrency(Number(item.price))}</span>
+    //   </div>
+
+    //   <div className="buttons d-flex flex-column">
+    //     <button onClick={() => increaseCartQuantity(Number(item.id))}>
+    //       Add to Basket
+    //     </button>
+    //     <button onClick={() => removeFromCart(Number(item.id))}>Remove</button>
+    //   </div>
+    // </div>
+
+    <Stack
+      direction="horizontal"
+      gap={2}
+      className="bg-white p-2 ml-4"
+      style={{ boxShadow: "1px 1px 20px #ccd1d1" }}
+    >
+      <div className="image h-5" style={{ height: "9.6em", width: "8em" }}>
+        <img src={item.image} alt="cart-image" className="w-100 h-100" />
       </div>
 
-      <div className="buttons d-flex flex-column">
-        <button onClick={() => increaseCartQuantity(Number(item.id))}>
-          Add to Basket
-        </button>
-        <button onClick={() => removeFromCart(Number(item.id))}>Remove</button>
+      <div className="info">
+        <Stack gap={1}>
+          <span>{newTitle}</span>
+          <span>{newDescription}</span>
+          <span>{formatCurrency(Number(item.price))}</span>
+        </Stack>
       </div>
-    </div>
+
+      <div className="buttons d-flex flex-column ms-auto mr-3">
+        <Stack gap={2}>
+          <button onClick={() => increaseCartQuantity(Number(item.id))}>
+            Add to Basket
+          </button>
+          <button onClick={() => removeFromCart(Number(item.id))}>
+            Remove
+          </button>
+        </Stack>
+      </div>
+    </Stack>
   );
 };

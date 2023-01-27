@@ -1,61 +1,23 @@
+
+
 .products-card {
   background-color: #fff;
   box-shadow: 1px 1px 20px #ccd1d1;
-  width: 16.65em;
-  border-radius: 2px;
-  height: 61vh;
-  padding: 0 0.3em;
   transition: all 0.2s ease-in-out;
+  height: 61vh;
+  /* width: 16.65em; */
 }
 .products-card:hover {
   transform: scale(1.06);
 }
-.products-card:hover .info button {
+.image img{
+  height: 9.6em;
+  width: 50%;
+}
+.products-card:hover .info-button {
   font-weight: 600;
 }
-.product-type {
-  font-size: 0.64rem;
-  font-style: italic;
-  text-align: end;
-}
-.info {
-  display: flex;
-  flex-direction: column;
-  padding: 0.8em;
-}
-.info .image {
-  height: 9.6em;
-  width: 100%;
-  text-align: center;
-  align-self: center;
-  margin-bottom: 1em;
-}
-.info .image img {
-  width: 50%;
-  height: 100%;
-}
-.info h5 {
-  font-size: 0.8rem;
-  font-weight: 700;
-  margin-bottom: 0.62em;
-}
-.rating-icons svg {
-  color: #9b7708;
-  margin-right: 0.34em;
-  font-size: 1.2em;
-  margin-bottom: 0.62em;
-}
-.info p {
-  font-size: 0.79rem;
-  margin-bottom: 0.62em;
-  /* height: 4em; */
-}
-.info h4 {
-  font-weight: 500;
-  margin-bottom: 0.62em;
-  font-size: 0.92rem;
-}
-.info button {
+.info-button {
   background: linear-gradient(180deg, #fde7ae, #f3c451);
   border: 1px solid #b79033;
   font-weight: 500;
@@ -65,6 +27,13 @@
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
-.info button:active {
+.info-button:active {
   box-shadow: 2px 10px 10px black;
 }
+.product-type {
+  font-size: 0.7rem;
+}
+.description{
+   height: 3.2em;
+}
+

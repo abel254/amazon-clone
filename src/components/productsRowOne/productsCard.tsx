@@ -6,6 +6,7 @@ import axios from "axios";
 import { ProductsCardProps } from "../props/Product.type";
 import { formatCurrency } from "../../utilities/formCurrency";
 import { useShoppingCart } from "../../context/ShoppingCartContext";
+import { Card } from "react-bootstrap";
 
 export const ProductsCard = ({
   id,
@@ -15,7 +16,7 @@ export const ProductsCard = ({
   category,
   image,
 }: ProductsCardProps) => {
-  const newDescription = description.slice(0, 52);
+  const newDescription = description.slice(0, 42);
   const newTitle = title.slice(0, 18);
 
   const { increaseCartQuantity, getItemQuantity } = useShoppingCart();
@@ -24,21 +25,29 @@ export const ProductsCard = ({
 
   return (
     <>
-      <section className="products-card">
-        <p className="product-type">{category}</p>
-        <div className="info">
-          <div className="image">
-            <img src={image} alt="" />
-          </div>
-          <h5>{newTitle}</h5>
-          <div className="rating-icons">{}</div>
-          <p>{newDescription}...</p>
-          <h4>{formatCurrency(Number(price))}</h4>
-          <button onClick={() => increaseCartQuantity(Number(id))}>
+      <Card className="products-card h-100 mb-4">
+        <Card.Text className="product-type text-muted ms-auto fst-italic mr-3">
+          {category}
+        </Card.Text>
+        <div className="image w-100 d-flex justify-content-center">
+          <Card.Img variant="top" src={image} />
+        </div>
+        <Card.Body>
+          <Card.Title className="fw-bold fs-6">{newTitle}</Card.Title>
+          <Card.Text className="description mt-auto">
+            {newDescription}...
+          </Card.Text>
+          <Card.Subtitle className="mb-3">
+            {formatCurrency(Number(price))}
+          </Card.Subtitle>
+          <button
+            className="info-button w-100"
+            onClick={() => increaseCartQuantity(Number(id))}
+          >
             Add to Basket
           </button>
-        </div>
-      </section>
+        </Card.Body>
+      </Card>
     </>
   );
 };
