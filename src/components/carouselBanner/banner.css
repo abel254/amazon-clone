@@ -1,7 +1,21 @@
-.banner {
-    height: 75vh;
-    margin: 0 6em;
-}
+
 .main-slide img {
-    height: 75vh !important;
+   height: 75vh !important;
+}
+.banner {
+  object-fit: cover;
+}
+.banner img{
+  height: inherit;
+}
+
+@media (min-width:576px){
+.main-slide img {
+   height: 50vh !important;
+}
+}
+@media (min-width:768px){
+.main-slide img {
+   height: 75vh !important;
+}
 }

@@ -12,7 +12,7 @@ const image5 = require("../../assets/img5.jpg");
 export const BannerComponent = () => {
   return (
     <>
-      <section className="banner">
+      <section className="banner  ">
         <Carousel
           autoPlay={true}
           infiniteLoop={true}

@@ -1,11 +1,13 @@
 import "./header.css";
 import { AiOutlineSearch, AiOutlineShoppingCart } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { useShoppingCart } from "../../context/ShoppingCartContext";
 
 // const logo = require("../assets/amazon-logo2.png");
 const logo = require("../../assets/amazon-logo2.png");
 
 const HeaderComponent = () => {
+  const { cartQuantity } = useShoppingCart();
   return (
     <>
       <section className="header" id="header">
@@ -33,7 +35,7 @@ const HeaderComponent = () => {
         <div className="basket">
           <Link to="/cart" className="basket-link">
             <AiOutlineShoppingCart />
-            <span>0</span>
+            <span>{cartQuantity}</span>
             <p>Basket</p>
           </Link>
         </div>

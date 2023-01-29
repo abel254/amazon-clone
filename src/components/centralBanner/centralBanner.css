@@ -1,8 +1,7 @@
-.central-banner{
-    margin: 0 6em 1.1em 6em;
-    height: 30vh;
-    background: url('./banner2.PNG');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+.central-banner {
+  height: 30vh;
+  background: url("../../assets/banner2.PNG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
