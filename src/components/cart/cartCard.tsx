@@ -13,10 +13,7 @@ type cartCardProps = {
 
 export const CartCard = ({ id, quantity }: cartCardProps) => {
   const [apiProducts, setApiProducts] = useState<ProductsCardProps[]>([]);
-  const { getItemQuantity, decreaseCartQuantity, increaseCartQuantity } =
-    useShoppingCart();
-
-  let itemQuantity = getItemQuantity(id);
+  const { increaseCartQuantity } = useShoppingCart();
 
   useEffect(() => {
     axios.get("https://fakestoreapi.com/products").then((res) => {
@@ -33,24 +30,6 @@ export const CartCard = ({ id, quantity }: cartCardProps) => {
   const newTitle = item.title.slice(0, 18);
 
   return (
-    // <div className="cart d-flex align-items-center justify-content-between">
-    //   <div className="image">
-    //     <img src={item.image} alt="Image" />
-    //   </div>
-    //   <div className="info">
-    //     <span>{newTitle}</span>
-    //     <span>{newDescription}</span>
-    //     <span>{formatCurrency(Number(item.price))}</span>
-    //   </div>
-
-    //   <div className="buttons d-flex flex-column">
-    //     <button onClick={() => increaseCartQuantity(Number(item.id))}>
-    //       Add to Basket
-    //     </button>
-    //     <button onClick={() => removeFromCart(Number(item.id))}>Remove</button>
-    //   </div>
-    // </div>
-
     <Stack
       direction="horizontal"
       gap={2}

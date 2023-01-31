@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Col, Row, Stack } from "react-bootstrap";
 import { useShoppingCart } from "../../context/ShoppingCartContext";
 import { formatCurrency } from "../../utilities/formCurrency";
+import Loading from "../Loading";
 import "./cart.css";
 import { CartCard } from "./cartCard";
 
@@ -11,15 +12,16 @@ const cartImage = require("../../assets/cart-image.png");
 export const CartComponent = () => {
   const { cartItems, cartQuantity } = useShoppingCart();
   const [apiProducts, setApiProducts] = useState<any[]>([]);
+  const [loading, setLoading]=useState(false)
 
   useEffect(() => {
     axios.get("https://fakestoreapi.com/products").then((res) => {
       console.log(res.data);
       setApiProducts(res.data);
+      setLoading(true)
     });
   }, []);
 
-  let quantity = cartQuantity;
 
   return (
     <>
@@ -36,11 +38,11 @@ export const CartComponent = () => {
           <div className="cart-products"></div>
           <Row>
             <Stack gap={2} className="mt-3 mb-3">
-              {cartItems.map((product) => (
+              {loading ? cartItems.map((product) => (
                 <Col>
                   <CartCard key={product.id} {...product} />
                 </Col>
-              ))}
+              )): <Loading/>}
             </Stack>
           </Row>
         </div>
