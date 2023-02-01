@@ -17,6 +17,8 @@
     background-color: #131921;
      color: #fff;
      padding: 0.8em 0;
+     display: flex;
+     justify-content: center;
 }
 .footer-div h5{
     font-size: 0.79rem;
