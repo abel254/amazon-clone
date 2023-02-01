@@ -1,35 +1,33 @@
-
-
-.navbar {
-    background-color: #232f3e;
-    padding: .32em 1em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff;
+.navbar-two {
+  background-color: #232f3e;
+  padding: 0.32em 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
 }
 
 nav ul li {
-    list-style: none;
-    display: flex;
-    align-items: center;
+  list-style: none;
+  display: flex;
+  align-items: center;
 }
 
 nav svg {
-    font-size: 1.3em;
-    margin-right: .1em;
+  font-size: 1.3em;
+  margin-right: 0.1em;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    padding-right: 1em;
-    font-size: .84rem;
+  text-decoration: none;
+  color: #fff;
+  padding-right: 1em;
+  font-size: 0.84rem;
 }
 
 .shop-deals a {
-    color: #fff;
-    text-decoration: none;
-    font-size: .9rem;
-    font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
